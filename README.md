@@ -1,6 +1,8 @@
 # Encoder-Decoder
  This is a small text encoder/decoder.
 
+ Run the program at the Encoder-Decoder.py file
+
  After encoding, the text will be saved to a file called coded.txt and will also be saved to a file called ToDecode.txt so that you can   decode your encoded sentence instantly.
  You can then copy it from the file and use it as a secret message.
 
@@ -21,3 +23,5 @@
  if you have any queries please contact mar.python@gmail.com
 
  This program is created by MISAB and the source file will be given if asked at the above email address
+
+To run click here [![Run on Repl.it](https://repl.it/badge/github/Misabar/Encoder-Decoder)](https://repl.it/github/Misabar/Encoder-Decoder)

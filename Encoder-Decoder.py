@@ -30,11 +30,11 @@ def getridofns(lists):
     return lists
 
 def CheckRecipient():
-    check = int(raw_input("\nDo you wish to\n1.Enter the recipient's email(only one)\n2.Take the recipient's email from file(multiple)\n"))
+    check = int(input("\nDo you wish to\n1.Enter the recipient's email(only one)\n2.Take the recipient's email from file(multiple)\n"))
     clear()
     if check == 1:
         l=[]
-        recipient = str(raw_input("Enter recipient's email address: "))
+        recipient = str(input("Enter recipient's email address: "))
         l.append(recipient)
         return l
     elif check == 2:
@@ -45,18 +45,18 @@ def CheckRecipient():
 
 def SendEmail():
     count = 0
-    choice = int(raw_input("Do you want to send the email from a\n1.Gmail account\n2.Outlook/Hotmail account(recommended)\n"))
+    choice = int(input("Do you want to send the email from a\n1.Gmail account\n2.Outlook/Hotmail account(recommended)\n"))
     clear()
     if choice == 1:
         gmailnote()
         mail = smtplib.SMTP("smtp.gmail.com", 587)
-        username= str(raw_input("Enter gmail username: "))
+        username= str(input("Enter gmail username: "))
     elif choice == 2:
         mail = smtplib.SMTP("smtp-mail.outlook.com", 587)
-        username= str(raw_input("Enter outlook/hotmail username: "))
+        username= str(input("Enter outlook/hotmail username: "))
     else:
         print('Invalid!')
-    password= str(raw_input("Enter Password: "))
+    password= str(input("Enter Password: "))
     contacts = CheckRecipient()
     message = GetMessage()
     mail.ehlo()
@@ -69,7 +69,7 @@ def SendEmail():
     print("Your "+str(count) +" mail(s) have been sent\n")
 
 def GetDataForCoding():
-    string = str(raw_input("Type a sentence to encode: "))
+    string = str(input("Type a sentence to encode: "))
     clear()
     return string
 
@@ -195,7 +195,7 @@ def PrintDecoded(string,code):
 
 def CoderSender():
     note()
-    i = int(raw_input("Which encoder would you like to use\n1. 1_2 type encoder\n2. 1_la type encoder\n"))
+    i = int(input("Which encoder would you like to use\n1. 1_2 type encoder\n2. 1_la type encoder\n"))
     clear()
     if i == 1:
         print("Message taken from file")
@@ -207,7 +207,7 @@ def CoderSender():
         print("Invalid!")
 
 def Coder():
-    i = int(raw_input("Which encoder would you like to use\n1. 1_2 type encoder\n2. 1_la type encoder\n"))
+    i = int(input("Which encoder would you like to use\n1. 1_2 type encoder\n2. 1_la type encoder\n"))
     clear()
     if i == 1:
         printcoded(GetDataForCoding(), code_1,0)
@@ -217,7 +217,7 @@ def Coder():
         print("Invalid!")
 
 def Decoder():
-    i = int(raw_input("Which Decoder would you like to use\n1. 1_2 type decoder\n2. 1_ln type decoder\n"))
+    i = int(input("Which Decoder would you like to use\n1. 1_2 type decoder\n2. 1_ln type decoder\n"))
     clear()
     if i == 1:
         PrintDecoded(GetDataForDecoding(), code_2) 
@@ -226,7 +226,7 @@ def Decoder():
     else:
         print("Invalid")
  
-i=int(raw_input("Do you want to\n1.Encode a sentence\n2.Decode a sentence\n3.Encode and send as email\n4.Exit\n"))    
+i=int(input("Do you want to\n1.Encode a sentence\n2.Decode a sentence\n3.Encode and send as email\n4.Exit\n"))    
 clear()
 while i :
 
@@ -242,9 +242,8 @@ while i :
     elif i == 4:
         clear()
         print("Thank you for using this program")
-	sleep(2)
         break
     else:
        clear()
        print("Invalid!")
-    i=int(raw_input("Do you want to\n1.Encode a sentence\n2.Decode a sentence\n3.Encode and send as email\n4.Exit\n"))
+    i=int(input("Do you want to\n1.Encode a sentence\n2.Decode a sentence\n3.Encode and send as email\n4.Exit\n"))
