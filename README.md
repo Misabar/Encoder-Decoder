@@ -22,6 +22,6 @@
 
  if you have any queries please contact mar.python@gmail.com
 
- This program is created by MISAB and the source file will be given if asked at the above email address
+ This program is created by MISAB and the the .exe version can be downloaded at [Download Encoder-Decoder](https://rb.gy/k2axcs) (only for windows 64-bit)
 
 To run click here [![Run on Repl.it](https://repl.it/badge/github/Misabar/Encoder-Decoder)](https://repl.it/github/Misabar/Encoder-Decoder)
