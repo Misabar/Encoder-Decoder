@@ -1,8 +1,6 @@
 # Encoder-Decoder
  This is a small text encoder/decoder.
 
- Run the program at the Encoder-Decoder.py file
-
  After encoding, the text will be saved to a file called coded.txt and will also be saved to a file called ToDecode.txt so that you can   decode your encoded sentence instantly.
  You can then copy it from the file and use it as a secret message.
 
