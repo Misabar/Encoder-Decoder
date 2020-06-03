@@ -22,4 +22,4 @@
 
  This program is created by MISAB and the the .exe version can be downloaded at [Download Encoder-Decoder](https://rb.gy/k2axcs) (only for windows 64-bit)
 
-To run click here [![Run on Repl.it](https://repl.it/badge/github/Misabar/Encoder-Decoder)](https://repl.it/github/Misabar/Encoder-Decoder)
+To run click here [![Run on Repl.it](https://repl.it/badge/github/Misabar/Encoder-Decoder)](https://repl.it/@Misabar/Encoder-Decoder)
