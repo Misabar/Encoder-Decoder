@@ -1,9 +1,7 @@
-from os import system
+from replit import clear
 from time import sleep
 import smtplib
   
-def clear():  
-    _ = system('cls') 
 clear()
 
 def gmailnote():
