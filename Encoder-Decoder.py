@@ -1,6 +1,7 @@
 from os import system
 from time import sleep
 import smtplib
+import getpass from getpass
   
 def clear():  
     _ = system('cls') 
@@ -45,23 +46,40 @@ def CheckRecipient():
 
 def SendEmail():
     count = 0
-    choice = int(input("Do you want to send the email from a\n1.Gmail account\n2.Outlook/Hotmail account(recommended)\n"))
+    choice = int(input("Do you want to send the email from a\n1.Gmail account\n2.Outlook/Hotmail account(recommended)\n"))   
     clear()
     if choice == 1:
-        gmailnote()
         mail = smtplib.SMTP("smtp.gmail.com", 587)
-        username= str(input("Enter gmail username: "))
+        emailtype = "gmail"   
     elif choice == 2:
         mail = smtplib.SMTP("smtp-mail.outlook.com", 587)
-        username= str(input("Enter outlook/hotmail username: "))
+        emailtype = "outlook"
     else:
         print('Invalid!')
-    password= str(input("Enter Password: "))
-    contacts = CheckRecipient()
-    message = GetMessage()
     mail.ehlo()
     mail.starttls()
-    mail.login(username,password )
+    while True:
+        try: 
+            if emailtype == "gmail":
+                gmailnote()
+                username= str(input("Enter gmail username: "))
+            elif emailtype == "outlook":
+                username= str(input("Enter outlook/hotmail username: "))
+            password= str(getpass("Enter Password: "))
+            mail.login(username,password )
+            clear()
+            print("You have successfully logged in.")
+        except Exception:
+            clear()
+            print('Incorrect Username or Password')
+            continue
+        else:
+            break
+    
+   
+    contacts = CheckRecipient()
+    message = GetMessage()
+   
     for person in contacts:
         count+=1
         mail.sendmail(username, person , message)
@@ -242,6 +260,7 @@ while i :
     elif i == 4:
         clear()
         print("Thank you for using this program")
+        sleep(2)
         break
     else:
        clear()
