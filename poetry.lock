@@ -7,8 +7,8 @@ python-versions = "*"
 version = "1.1.3"
 
 [metadata]
-content-hash = "7c03224125effc94902830c28174100511842c631e92d0fe074415e2b26ad8c5"
-python-versions = "^3.8"
+content-hash = "c2c35fceca948b2183f8410540c5b92dd90c8eee22f33f2bd029b99d11a4be95"
+python-versions = "^3.7"
 
 [metadata.hashes]
 replit = ["99fee9325d0ddb57d49316be682679caeeced684e5f85dcc094892feda149139"]
