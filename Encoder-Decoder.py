@@ -1,7 +1,7 @@
 from os import system
 from time import sleep
 import smtplib
-import getpass from getpass
+from getpass import getpass
   
 def clear():  
     _ = system('cls') 
